@@ -1,0 +1,28 @@
+[default]
+SECRET_KEY="@jinja {{env.SECRET_KEY}}"
+SQLALCHEMY_TRACK_MODIFICATIONS=false
+#PICPAY_TOKEN="@jinja {{env.PICPAY_TOKEN}}"
+
+MAIL_SENDER="donotreply@rest.com"
+MAIL_SERVER='smtp.mailtrap.io'
+MAIL_PORT=2525
+MAIL_USERNAME='ca0f1e63b52823'
+MAIL_PASSWORD='03995807f8606f'
+MAIL_USE_TLS=true
+MAIL_USER_SSL=false
+
+[development]
+SQLALCHEMY_DATABASE_URI="sqlite:///ana_dev.db"
+# mysql://root:St@r19735@localhost/ana_dev"
+#PICPAY_CALLBACK_URL="http://localhost:5000/meus-pedidos",
+#PICPAY_RETURN_URL="http://localhost:5000/order/notification"
+
+[production]
+SQLALCHEMY_DATABASE_URI="sqlite:///ana.db"
+# mysql://root:St@r19735@localhost/ana
+#PICPAY_CALLBACK_URL="http://localhost:5000/meus-pedidos",
+#PICPAY_RETURN_URL="http://localhost:5000/order/notification"
+
+
+[testing]
+SQLALCHEMY_DATABASE_URI="sqlite://"
